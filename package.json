@@ -5,5 +5,25 @@
   "main": "index.js",
   "repository": "https://github.com/ElectronicBabylonianLiterature/fragment-hit-counter.git",
   "author": "Jussi Laasonen <jussi.laasonen@lmu.de>",
-  "license": "MIT"
+  "license": "MIT",
+  "engines": {
+    "node": "^10.9.0",
+    "yarn": "^1.9.4"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.6",
+    "istanbul": "1.1.0-alpha.1",
+    "jasmine": "^3.2.0",
+    "standard": "^11.0.1"
+  },
+  "scripts": {
+    "test": "istanbul cover node_modules/jasmine/bin/jasmine.js --include-all-sources true"
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "env": {
+      "jasmine": true,
+      "node": true
+    }
+  }
 }
