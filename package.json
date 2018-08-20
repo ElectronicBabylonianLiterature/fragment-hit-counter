@@ -25,5 +25,8 @@
       "node": true,
       "jest": true
     }
+  },
+  "dependencies": {
+    "lodash": "^4.17.10"
   }
 }
