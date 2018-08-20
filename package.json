@@ -12,18 +12,18 @@
   },
   "devDependencies": {
     "babel-eslint": "^8.2.6",
-    "istanbul": "1.1.0-alpha.1",
-    "jasmine": "^3.2.0",
+    "jest": "^23.5.0",
     "standard": "^11.0.1"
   },
   "scripts": {
-    "test": "istanbul cover node_modules/jasmine/bin/jasmine.js --include-all-sources true"
+    "test": "jest"
   },
   "standard": {
     "parser": "babel-eslint",
     "env": {
-      "jasmine": true,
-      "node": true
+      "es6": true,
+      "node": true,
+      "jest": true
     }
   }
 }
