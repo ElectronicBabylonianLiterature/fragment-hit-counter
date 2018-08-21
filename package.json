@@ -1,6 +1,6 @@
 {
   "name": "fragment-hit-counter",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "A script to extract fragment hits from a catalogue",
   "main": "index.js",
   "repository": "https://github.com/ElectronicBabylonianLiterature/fragment-hit-counter.git",
