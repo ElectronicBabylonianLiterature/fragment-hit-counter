@@ -43,9 +43,11 @@ The catalogue directory should contain "csv" files with the following format:
 ```
 
 The fragment ID is parsed from the file name:
-- `00XXX.csv` => `K.XXX`
-- `YY 00XXXX.csv` => `YY.XXXX`
-- `Rm 2 00XXXX.csv` => `Rm-II.XXXX`
-- `Rm II 00XXXX.csv` => `Rm-II.XXXX`
+- `<number>.csv` => `K.<number without leading zeroes>`
+- `Sm <number>.csv` => `Sm.<number without leading zeroes>`
+- `DT <number>.csv` => `DT.<number without leading zeroes>`
+- `Rm <number>.csv` => `Rm.<number without leading zeroes>`
+- `Rm 2 <number>.csv` => `Rm-II.<number without leading zeroes>`
+- `Rm II <number>.csv` => `Rm-II.<number without leading zeroes>`
 
 If the file name does not match any pattern the file is ignored.
