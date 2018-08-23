@@ -13,7 +13,7 @@ Usage:
 node index.js <a path to the catalogue directory> <MongoDB URI> <MongoDB database>
 ```
 
-The catalogue directory should contain "csv" files with the following format:
+The catalogue directory should contain "csv" files with the following formats:
 
 ```
 "Search Results"
@@ -40,6 +40,20 @@ The catalogue directory should contain "csv" files with the following format:
 "File name";"Title";"Page";"Search Instance"
 "BC 2.pdf";"";"392";"sick people. [K. 6447] Portion out of the middle, 32in. by 31in.; . "
 
+```
+
+```
+"Search Results"
+
+"Summary"
+"Saved on";"27.07.2018 12:19:10"
+"Searched for";"K 14021"
+"In index(es)";"X:\\yyy\\yyy\\_OA\\Indice\\Index.pdx"
+"Number of document(s) found";"1"              
+"Number of instance(s) found";"1"              
+
+"File name";"Title";"Page";"Search Instance"
+"BC 3.pdf";"";"467";"houses, etc. [K. 14021] Left-hand corner, 1ain. by 1lin.; ......... + 6 "
 ```
 
 The fragment ID is parsed from the file name:
