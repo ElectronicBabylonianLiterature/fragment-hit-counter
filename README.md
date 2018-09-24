@@ -63,6 +63,9 @@ The fragment ID is parsed from the file name:
 - `Rm <number>.csv` => `Rm.<number without leading zeroes>`
 - `Rm 2 <number>.csv` => `Rm-II.<number without leading zeroes>`
 - `Rm II <number>.csv` => `Rm-II.<number without leading zeroes>`
+- `BM <number>.csv` => `BM.<number without leading zeroes>`
+- `AA-BB-CC 0DD.csv.csv` => `18AA,<BB padded to to digits><CC padded to two digits>.<DD without leading zeroes>`
+- `AA-BB-CC,DD.csv` => `18AA,<BB padded to to digits><CC padded to two digits>.<DD without leading zeroes>`
 
 Hits from different files resulting in same fragment ID are summed for the final result.
 
