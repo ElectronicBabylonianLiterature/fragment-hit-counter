@@ -5,7 +5,8 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/505e1372f12d2ec7eb0b/maintainability)](https://codeclimate.com/github/ElectronicBabylonianLiterature/fragment-hit-counter/maintainability)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-The hit counter script extracts fragments hits from a catalogue. For each fragment in the catalogue the number of unique documents not starting with `BC`, `cad `, `cad_`, `CAD `, or `CAD_` is calculated and saved to the database under `hits` property.
+The hit counter script extracts fragments hits from a catalogue. For each fragment in the catalogue the documents starting with `BC` are collected and saved to the database under `uncuratedReferences` property as a list of objects with "File name" column without extension and quotes as `document` and the list of pages from the "Page" as integers as `pages`.
+
 
 Usage:
 
