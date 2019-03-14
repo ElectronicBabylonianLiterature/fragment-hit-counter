@@ -1,7 +1,7 @@
 {
   "name": "fragment-hit-counter",
-  "version": "2.0.1",
-  "description": "A script to extract fragment hits from a catalogue",
+  "version": "3.0.0",
+  "description": "A script to extract references from a catalogue of CSV files",
   "main": "index.js",
   "repository": "https://github.com/ElectronicBabylonianLiterature/fragment-hit-counter.git",
   "author": "Jussi Laasonen <jussi.laasonen@lmu.de>",
@@ -30,6 +30,7 @@
   "dependencies": {
     "lodash": "^4.17.10",
     "mongodb": "^3.1.13",
+    "papaparse": "^4.6.3",
     "progress": "https://github.com/turbopope/node-progress.git"
   }
 }
