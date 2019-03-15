@@ -14,7 +14,7 @@ Usage:
 node index.js <a path to the catalogue directory> <MongoDB URI> <MongoDB database>
 ```
 
-The catalogue directory should contain "csv" files with the following format:
+The catalogue directory should contain windows1252 encoded text files with the following format:
 
 ```
 "Search Results"

@@ -4365,6 +4365,11 @@ which@^1.2.9, which@^1.3.0:
   dependencies:
     isexe "^2.0.0"
 
+windows-1252@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/windows-1252/-/windows-1252-1.0.0.tgz#721d9467d4da172d2b8dd2a56094b04355fe5976"
+  integrity sha1-ch2UZ9TaFy0rjdKlYJSwQ1X+WXY=
+
 wordwrap@~0.0.2:
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/wordwrap/-/wordwrap-0.0.3.tgz#a3d5da6cd5c0bc0008d37234bbaf1bed63059107"
