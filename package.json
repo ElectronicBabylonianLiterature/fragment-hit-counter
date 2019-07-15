@@ -1,6 +1,6 @@
 {
   "name": "fragment-hit-counter",
-  "version": "3.0.1",
+  "version": "3.1.0",
   "description": "A script to extract references from a catalogue of CSV files",
   "main": "index.js",
   "repository": "https://github.com/ElectronicBabylonianLiterature/fragment-hit-counter.git",
