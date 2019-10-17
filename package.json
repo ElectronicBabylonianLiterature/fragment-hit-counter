@@ -31,7 +31,7 @@
     "lodash": "^4.17.10",
     "mongodb": "^3.1.13",
     "papaparse": "^5.1.0",
-    "progress": "https://github.com/turbopope/node-progress.git",
+    "progress": "^2.0.0",
     "windows-1252": "^1.0.0"
   }
 }
