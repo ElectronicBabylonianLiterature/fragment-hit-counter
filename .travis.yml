@@ -7,5 +7,5 @@ before_script:
 - "./cc-test-reporter before-build"
 script:
 - yarn standard
-- yarn test --coverage
+- yarn test --coverage --unhandled-rejections=strict
 after_script: "./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT"
