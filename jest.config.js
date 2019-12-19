@@ -49,10 +49,10 @@ module.exports = {
   // forceCoverageMatch: [],
 
   // A path to a module which exports an async function that is triggered once before all test suites
-  globalSetup: './setup',
+  // globalSetup: './setup',
 
   // A path to a module which exports an async function that is triggered once after all test suites
-  globalTeardown: './teardown',
+  // globalTeardown: './teardown',
 
   // A set of global variables that need to be available in all test environments
   // globals: {},
@@ -84,6 +84,7 @@ module.exports = {
 
   // A preset that is used as a base for Jest's configuration
   // preset: null,
+  preset: '@shelf/jest-mongodb'
 
   // Run tests from one or more projects
   // projects: null,
@@ -124,7 +125,7 @@ module.exports = {
   // snapshotSerializers: [],
 
   // The test environment that will be used for testing
-  testEnvironment: './mongo-environment'
+  // testEnvironment: './mongo-environment'
 
   // Options that will be passed to the testEnvironment
   // testEnvironmentOptions: {},
