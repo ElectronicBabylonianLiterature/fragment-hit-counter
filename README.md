@@ -7,12 +7,24 @@
 
 The script extracts fragments references from a catalogue. For each fragment in the catalogue the documents not starting with `BC` are collected and saved to the database under `uncuratedReferences` property as a list of objects with "File name" column without extension and quotes as `document` and the list of pages from the "Page" as integers as `pages`.
 
-
 Usage:
 
+To run the script, use the following command:
+
 ```
-node index.js <a path to the catalogue directory> <MongoDB URI> <MongoDB database>
+node index.js [-o <output file>] [-local] [-no-ssl] <path to JSON file> [--uri <MongoDB URI>] [--database <MongoDB database>]
 ```
+
+The script takes the following arguments:
+
+`-o <output file>` (optional) - saves the output JSON to a file instead of updating the MongoDB database
+`-local` (optional) - saves the output JSON to a file and skips updating the MongoDB database
+`-no-ssl` (optional) - connects to the MongoDB server without SSL
+`<path to JSON file>` - the path to the JSON file containing the hits data
+`--uri <MongoDB URI>` (optional) - the MongoDB connection string
+`--database <MongoDB database>` (optional) - the name of the MongoDB database
+
+If `-local` is specified, the script will save the output JSON to a file with a default filename "`data.json`". If `-o` is specified, the script will save the output JSON to the file specified in the argument.
 
 The catalogue directory should contain windows1252 encoded text files with the following format:
 
@@ -26,20 +38,20 @@ The catalogue directory should contain windows1252 encoded text files with the f
 "Number of document(s) found";"5"              
 "Number of instance(s) found";"5"              
 
-"File name";"Title";"Page";"Search Instance"
-"Fincke 2000 Augenleiden nach keilschriftlichen Quellen. Untersuchungen zur altorientalischen Medizin WMF 70.pdf";"";"185";"5 ......�........�.....�..... 178 K. 6447+7086+ ... cf. K. 2354+ ... K. 6461 Z. "
+"File name","Title","Page","Search Instance"
+"Fincke 2000 Augenleiden nach keilschriftlichen Quellen. Untersuchungen zur altorientalischen Medizin WMF 70.pdf","","185","5 ......�........�.....�..... 178 K. 6447+7086+ ... cf. K. 2354+ ... K. 6461 Z. "
 
-"File name";"Title";"Page";"Search Instance"
-"Hee�el 2016 Medizinische Texte aus dem Alten Mesopotamien Translating Writings of Early Scholars.pdf";"";"14";"K. 3237 + K. 6447 + K. 7086 + K. 8356 + K. 8800 "
+"File name","Title","Page","Search Instance"
+"Hee�el 2016 Medizinische Texte aus dem Alten Mesopotamien Translating Writings of Early Scholars.pdf","","14","K. 3237 + K. 6447 + K. 7086 + K. 8356 + K. 8800 "
 
-"File name";"Title";"Page";"Search Instance"
-"Borger HKL 1 [1967].pdf";"";"282";"Ebeling KMI 45f.)+K 6447 C~;u~l.)+K 9828+K 11868(AMT 6/"
+"File name","Title","Page","Search Instance"
+"Borger HKL 1 [1967].pdf","","282","Ebeling KMI 45f.)+K 6447 C~,u~l.)+K 9828+K 11868(AMT 6/"
 
-"File name";"Title";"Page";"Search Instance"
-"Borger HKL 2 [1975].pdf";"";"162";"38) auch + K 6447 (von Thompson verwertet) + ~m 637 ("
+"File name","Title","Page","Search Instance"
+"Borger HKL 2 [1975].pdf","","162","38) auch + K 6447 (von Thompson verwertet) + ~m 637 ("
 
-"File name";"Title";"Page";"Search Instance"
-"BC 2.pdf";"";"392";"sick people. [K. 6447] Portion out of the middle, 32in. by 31in.; . "
+"File name","Title","Page","Search Instance"
+"BC 2.pdf","","392","sick people. [K. 6447] Portion out of the middle, 32in. by 31in., . "
 
 ```
 
