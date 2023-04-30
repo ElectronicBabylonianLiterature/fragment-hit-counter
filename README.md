@@ -17,12 +17,12 @@ node index.js [-o <output file>] [-local] [-no-ssl] <path to JSON file> [--uri <
 
 The script takes the following arguments:
 
-`-o <output file>` (optional) - saves the output JSON to a file instead of updating the MongoDB database
-`-local` (optional) - saves the output JSON to a file and skips updating the MongoDB database
-`-no-ssl` (optional) - connects to the MongoDB server without SSL
-`<path to JSON file>` - the path to the JSON file containing the hits data
-`--uri <MongoDB URI>` (optional) - the MongoDB connection string
-`--database <MongoDB database>` (optional) - the name of the MongoDB database
+- `-o <output file>` (optional) - saves the output JSON to a file instead of updating the MongoDB database
+- `-local` (optional) - saves the output JSON to a file and skips updating the MongoDB database
+- `-no-ssl` (optional) - connects to the MongoDB server without SSL
+- `<path to JSON file>` - the path to the JSON file containing the hits data
+- `--uri <MongoDB URI>` (optional) - the MongoDB connection string
+- `--database <MongoDB database>` (optional) - the name of the MongoDB database
 
 If `-local` is specified, the script will save the output JSON to a file with a default filename "`data.json`". If `-o` is specified, the script will save the output JSON to the file specified in the argument.
 
