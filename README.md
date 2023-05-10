@@ -76,3 +76,31 @@ The fragment ID is parsed from the file name:
 References from different files resulting in same fragment ID are combined for the final result.
 
 If the file name does not match any pattern the file is ignored.
+
+If saved locally, the JSON file can be imported into the database with the following command (change as needed):
+
+```
+function doit() {
+  references = [
+    // ...
+  ]
+  missing = [];
+  references.forEach(({_id, uncuratedReferences}) => {
+    if (db.getCollection('fragments').findOne({_id: _id})) {
+      db.getCollection('fragments').update(
+        {_id: _id},
+        {
+          $set: {
+            uncuratedReferences
+          }
+        }
+      );
+    } else {
+      missing.push({_id, uncuratedReferences});
+    }
+  });
+  return missing;
+}
+
+doit();
+```
