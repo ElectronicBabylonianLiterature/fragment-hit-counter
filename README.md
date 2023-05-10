@@ -12,7 +12,7 @@ Usage:
 To run the script, use the following command:
 
 ```
-node index.js [-o <output file>] [-local] [-no-ssl] <path to JSON file> [--uri <MongoDB URI>] [--database <MongoDB database>]
+node index.js [-o <output file>] [-local] [-no-ssl] <path to folder> [--uri <MongoDB URI>] [--database <MongoDB database>]
 ```
 
 The script takes the following arguments:
@@ -20,7 +20,7 @@ The script takes the following arguments:
 - `-o <output file>` (optional) - saves the output JSON to a file instead of updating the MongoDB database
 - `-local` (optional) - saves the output JSON to a file and skips updating the MongoDB database
 - `-no-ssl` (optional) - connects to the MongoDB server without SSL
-- `<path to JSON file>` - the path to the JSON file containing the hits data
+- `<path to JSON file>` - the path to the folder containing the hits data
 - `--uri <MongoDB URI>` (optional) - the MongoDB connection string
 - `--database <MongoDB database>` (optional) - the name of the MongoDB database
 
@@ -76,3 +76,31 @@ The fragment ID is parsed from the file name:
 References from different files resulting in same fragment ID are combined for the final result.
 
 If the file name does not match any pattern the file is ignored.
+
+If saved locally, the JSON file can be imported into the database with the following command (change as needed):
+
+```
+function doit() {
+  references = [
+    // ...
+  ]
+  missing = [];
+  references.forEach(({_id, uncuratedReferences}) => {
+    if (db.getCollection('fragments').findOne({_id: _id})) {
+      db.getCollection('fragments').update(
+        {_id: _id},
+        {
+          $set: {
+            uncuratedReferences
+          }
+        }
+      );
+    } else {
+      missing.push({_id, uncuratedReferences});
+    }
+  });
+  return missing;
+}
+
+doit();
+```
