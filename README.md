@@ -12,15 +12,15 @@ Usage:
 To run the script, use the following command:
 
 ```
-node index.js [-o <output file>] [-local] [-no-ssl] <path to folder> [--uri <MongoDB URI>] [--database <MongoDB database>]
+node index.js <path to folder> [-o <output file>] [-local] [-no-ssl] [--uri <MongoDB URI>] [--database <MongoDB database>]
 ```
 
 The script takes the following arguments:
 
-- `-o <output file>` (optional) - saves the output JSON to a file instead of updating the MongoDB database
+- `<path to folder>` - the path to the folder containing the hits data
+- - `-o <output file>` (optional) - saves the output JSON to a file instead of updating the MongoDB database
 - `-local` (optional) - saves the output JSON to a file and skips updating the MongoDB database
 - `-no-ssl` (optional) - connects to the MongoDB server without SSL
-- `<path to JSON file>` - the path to the folder containing the hits data
 - `--uri <MongoDB URI>` (optional) - the MongoDB connection string
 - `--database <MongoDB database>` (optional) - the name of the MongoDB database
 
