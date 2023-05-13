@@ -7,7 +7,12 @@
 
 The script extracts fragments references from a catalogue. For each fragment in the catalogue the documents not starting with `BC` are collected and saved to the database under `uncuratedReferences` property as a list of objects with "File name" column without extension and quotes as `document` and the list of pages from the "Page" as integers as `pages`.
 
-Usage:
+## Requirements
+
+- Node
+- Lodash
+
+## Usage
 
 To run the script, use the following command:
 
@@ -25,6 +30,8 @@ The script takes the following arguments:
 - `--database <MongoDB database>` (optional) - the name of the MongoDB database
 
 If `-local` is specified, the script will save the output JSON to a file with a default filename "`data.json`". If `-o` is specified, the script will save the output JSON to the file specified in the argument.
+
+## Format
 
 The catalogue directory should contain windows1252 encoded text files with the following format:
 
@@ -76,6 +83,8 @@ The fragment ID is parsed from the file name:
 References from different files resulting in same fragment ID are combined for the final result.
 
 If the file name does not match any pattern the file is ignored.
+
+## Insert to MongoDB
 
 If saved locally, the JSON file can be imported into the database with the following command (change as needed):
 
