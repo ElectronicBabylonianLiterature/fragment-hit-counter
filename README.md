@@ -78,6 +78,20 @@ The fragment ID is parsed from the file name:
 - `Si <id>.csv` => `Si.<id>`
 - `HS <id>.csv` => `HS.<id>`
 - `VAT <id>.csv` => `VAT.<id>`
+- `ANT <id>.csv` => `ANT.<id>`
+- `AOS-1 <id>.csv` => `AOS-1.<id>`
+- `DavidAstr <id>.csv` => `DavidAstr.<id>`
+- `EAH <id>.csv` => `EAH.<id>`
+- `GCBC <id>.csv` => `GCBC.<id>`
+- `Lager <id>.csv` => `Lager.<id>`
+- `MLC <id>.csv` => `MLC.<id>`
+- `NCBS <id>.csv` => `NCBS.<id>`
+- `NCBT <id>.csv` => `NCBT.<id>`
+- `Newell <id>.csv` => `Newell.<id>`
+- `Ott-Seal <id>.csv` => `Ott-Seal.<id>`
+- `Ott-Tablet <id>.csv` => `Ott-Tablet.<id>`
+- `RBC <id>.csv` => `RBC.<id>`
+- `YBC <id>.csv` => `YBC.<id>`
 
 References from different files resulting in same fragment ID are combined for the final result.
 
