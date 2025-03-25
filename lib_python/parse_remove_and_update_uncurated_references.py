@@ -55,7 +55,7 @@ def update_database(data):
             )
 
         # Print progress every 10%
-        if i % (total // 10) == 0 or i == total:
+        if i % (total // 5) == 0 or i == total:
             print(f"Progress: {i}/{total} ({(i / total) * 100:.0f}%)")
 
     print("Database update completed.")
