@@ -41,9 +41,10 @@ from pymongo import MongoClient
 
 STOPWORDS = ["Postdoc", "habilpart2", "Ausf.Katw2",
              "Saenz_Masterarbeit_Manuskript_Entwurf", "Fechner 7 sages - Manuskript",
-             "Koch forthcoming Mesopotamian Divination Texts- Conversing with the Gods GMTR"]
+             "Koch forthcoming Mesopotamian Divination Texts- Conversing with the Gods GMTR",
+             "04_EJ_BDP", "The Babylonian Disputation Poems] The Babylonian Disputation Poems"]
 # Matches documents that contain only numbers
-PATTERN = re.compile(r'^[\d_]+$')
+PATTERN = re.compile(r'^[\d\(\)_]+$')
 
 # Connect to MongoDB
 print("Connecting to MongoDB...")
@@ -138,7 +139,7 @@ def main():
                        help='Field to use for matching documents (default: _id)')
     args = parser.parse_args()
     
-    json_data = load_json('./ybc_missing.json')  # Adjust filename as needed
+    json_data = load_json('./missing-ybc.json')  # Adjust filename as needed
     filtered_data = filter_references(json_data)
     update_database(filtered_data, args.match)
 
