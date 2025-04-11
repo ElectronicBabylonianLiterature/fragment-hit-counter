@@ -10,10 +10,10 @@ ACROBAT_PATH = r"C:\Program Files\Adobe\Acrobat DC\Acrobat\Acrobat.exe"
 PDF_INDEX = r"G:\My Drive\_OA\Indice\Index.pdx"
 INPUT_FILE = r"G:\My Drive\eBL\Catalogue\iraq_museum_traditional_references.txt"
 DELAYS = {
-    'initial': 2,
-    'after_navigation': 7,
-    'after_entry': 15,
-    'after_final_click': 7
+    'initial': 3,
+    'after_navigation': 10,
+    'after_entry': 25,
+    'after_final_click': 10
 }
 
 def log_step(action, details=""):
