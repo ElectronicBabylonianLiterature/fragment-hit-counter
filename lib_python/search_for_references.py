@@ -143,7 +143,7 @@ def update_input_file(file_path, processed_ids):
     
     remaining_ids = [id for id in all_ids if id not in processed_ids]
     
-    with open(file_path, 'w') as f:
+    with open(file_path, 'w', encoding='utf-8') as f:
         f.write('\n'.join(remaining_ids) + '\n')
     
     log_step("Updated input file", f"Removed {len(processed_ids)} IDs")
