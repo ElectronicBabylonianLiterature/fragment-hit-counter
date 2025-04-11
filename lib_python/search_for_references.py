@@ -8,7 +8,7 @@ from pymongo import MongoClient
 # Configuration - Update these paths to match your system
 ACROBAT_PATH = r"C:\Program Files\Adobe\Acrobat DC\Acrobat\Acrobat.exe"
 PDF_INDEX = r"G:\My Drive\_OA\Indice\Index.pdx"
-INPUT_FILE = r"G:\My Drive\eBL\Catalogue\yale_missing_ids.txt"
+INPUT_FILE = r"G:\My Drive\eBL\Catalogue\iraq_museum_traditional_references.txt"
 DELAYS = {
     'initial': 2,
     'after_navigation': 7,
@@ -114,7 +114,7 @@ def main():
             log_step("Error", f"Input file not found at {INPUT_FILE}")
             return
             
-        with open(INPUT_FILE, 'r') as f:
+        with open(INPUT_FILE, 'r', encoding='utf-8') as f:
             museum_ids = [line.strip() for line in f if line.strip()]
             log_step(f"Loaded {len(museum_ids)} IDs from existing file")
     else:
