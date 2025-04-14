@@ -36,7 +36,7 @@ def get_yale_fragment_ids():
     return ids
 
 def save_ids_to_file(ids, file_path):
-    with open(file_path, 'w') as f:
+    with open(file_path, 'w', encoding='utf-8') as f:
         f.write('\n'.join(ids) + '\n')
     log_step("Saved IDs to file", file_path)
 
@@ -138,7 +138,7 @@ def main():
 
 def update_input_file(file_path, processed_ids):
     """Remove processed IDs from input file"""
-    with open(file_path, 'r') as f:
+    with open(file_path, 'r', encoding='utf-8') as f:
         all_ids = [line.strip() for line in f if line.strip()]
     
     remaining_ids = [id for id in all_ids if id not in processed_ids]
